@@ -1,1 +1,1 @@
-# Security-Systems
+Projects developed in C and Bash, covering cryptographic algorithms including RSA and Diffie-Hellman key exchange, file access control and logging using LD_PRELOAD and function interception, web application vulnerability analysis involving SQL injection and XSS, network traffic monitoring with libpcap, firewall-based ad blocking using iptables and DNS resolution, and intrusion detection using custom Snort rules.
