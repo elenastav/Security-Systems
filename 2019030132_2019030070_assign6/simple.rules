@@ -1,0 +1,12 @@
+# Rule 1: ICMP Connection Attempt
+alert icmp any any -> any any (msg:"ICMP Connection Attempt"; sid:100001;)
+
+# Rule 2: Packets containing "hello" string
+alert ip any any -> any any (content:"hello"; msg:"Packet contains 'hello'"; sid:100002;)
+
+# Rule 3: Traffic between non-root ports
+alert tcp any any -> any !1:1024 (msg:"Non-root Port Traffic"; sid:100003;)
+
+# Rule 4: SSH Brute Force Attempt
+alert tcp any any -> any 22 (msg:"SSH Brute Force Attempt"; detection_filter:track by_src, count 10, seconds 600; sid:100004;)
+
